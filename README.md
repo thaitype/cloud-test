@@ -1,19 +1,19 @@
-# NPM TypeScript Boilerplate
+# Cloud Test
 
-> This repo is only the boilerplate for npm packages, found in npm registry for testing purpose only,
+> In developement
 
-## Use this repo
+The Cloud Test library is designed to address specific challenges encountered when working with various cloud services, particularly those with unique constraints, such as Azure Redis. Scaling operations in these environments can be time-consuming and have specific limitations, such as the need to follow a specific scaling sequence.
 
-```
-git clone https://github.com/mildronize/simple-typescript-boilerplate.git [project_name]
-```
+## Features
+This library provides essential hooks, including `create`, `update`, and `delete`, to streamline the testing process in cloud environments. It is particularly useful in production scenarios where understanding the constraints of the cloud service is crucial.
 
-```bash
-# start
-npm start
-# Test watch mode
-npm run test:watch
-```
+## How It Works
+The library facilitates the creation of test cases for lengthy operations, ensuring that the scaling strategy is effective in the specified environment. For instance, when dealing with Azure Redis, where direct scaling from **"Basic C5"** to **"Standard C2"** is not allowed, the library helps orchestrate the necessary intermediate steps, such as scaling to **"Standard C5"** before scaling down to the target configuration.
 
-## Thanks
-- https://www.youtube.com/watch?v=eh89VE3Mk5g
+By incorporating the Cloud Test library into your workflow, you can validate your scaling strategy in complex cloud environments, providing confidence in your deployment processes.
+
+## Contribution
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on the GitHub repository.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
